@@ -11,15 +11,16 @@ filetype plugin indent on
 
 " Pretty {
 set go=ce
-colorscheme vividchalk
+" colorscheme vividchalk
+colorscheme solarized
 syntax on
 " }
 
 " mappings {
 nnoremap ; :
 let mapleader=","
-noremap <S-space> <C-y>
-noremap <space> <C-e>
+nnoremap <S-space> <C-y>
+nnoremap <space> <C-e>
 map <esc>t <esc>:NERDTree<CR>
 map <left> <esc><C-w>h
 map <up> <esc><C-w>k
@@ -59,7 +60,7 @@ set smarttab        " insert tabs on the start of a line according to shiftwidth
 set hlsearch        " highlight search terms
 set incsearch       " show search matches as you type
 set nobackup
-set directory=~/.vim/temp
+set directory=~/.vim/tmp
 set fileformats=unix,mac,dos
 set mouse=a
 set history=1000    " remember more commands and search history
@@ -69,6 +70,7 @@ set wildignore=*.swp
 set title           " change the terminal's title
 set list
 set listchars=tab:>.,trail:.,extends:#,nbsp:. " show tabs and trailing
+set makeprg=rake " set make to rake
 
 autocmd BufEnter * :syntax sync fromstart
 
